@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Konkurs plastyczny</title>
+    <link rel="stylesheet" href="css/konkurs.css">
+</head>
+<body>
+
+<div class="motyw" title="motyw">🌗</div>
+
+<main>
+    <h2>Formularz konkursu plastycznego</h2>
+
+    <form action="https://httpbin.org/get" method="get" class="contest-form">
+
+        <label>Imię
+            <input type="text" name="imie" maxlength="30" required>
+        </label>
+
+        <label>Nazwisko
+            <input type="text" name="nazwisko" maxlength="50" required>
+        </label>
+
+        <label>Email
+            <input type="email" name="email" required>
+        </label>
+
+        <label>Miasto
+            <input list="miasta" name="miasto" placeholder="Wpisz lub wybierz…" required>
+            <datalist id="miasta">
+                <option value="Warszawa"></option>
+                <option value="Kraków"></option>
+                <option value="Gdańsk"></option>
+                <option value="Wrocław"></option>
+            </datalist>
+        </label>
+
+        <label>Data urodzenia
+            <input type="date" name="urodziny" required>
+        </label>
+
+        <label>Liczba prac
+            <input type="number" name="liczba" min="1" max="6" required>
+        </label>
+
+        <label>Kolor przewodni
+            <input type="color" name="kolor" required>
+        </label>
+
+        <label>Kategoria
+            <select name="kategoria" required>
+                <option value="">-- wybierz kategorię --</option>
+                <option value="dzieci">Dzieci</option>
+                <option value="mlodziez">Młodzież</option>
+                <option value="dorosli">Dorośli</option>
+            </select>
+        </label>
+
+        <fieldset>
+            <legend>Publikacja prac</legend>
+            <label><input type="radio" name="publikacja" value="tak" required> Tak</label>
+            <label><input type="radio" name="publikacja" value="nie" required> Nie</label>
+        </fieldset>
+
+        <label class="check">
+            <input type="checkbox" name="zgoda" required>
+            Wyrażam zgodę na udział w konkursie
+        </label>
+
+        <button type="submit" class="wyslij">Wyślij</button>
+
+    </form>
+</main>
+
+</body>
+</html>

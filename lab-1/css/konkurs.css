@@ -1,0 +1,84 @@
+body {
+    background: white;
+    color: black;
+    font-family: Arial;
+    margin: 0;
+    padding: 20px;
+    transition: .3s;
+}
+
+.ciemny {
+    --bg: #1a1a1a;
+    --text: #e5e5e5;
+    --card: #333;
+}
+
+.motyw {
+    font-size: 32px;
+    cursor: pointer;
+    user-select: none;
+}
+
+main {
+    max-width: 500px;
+    margin: 0 auto;
+    background:white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #aaa;
+}
+
+.contest-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+input, select {
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+input[type="color"] {
+    height: 40px;
+    cursor: pointer;
+}
+
+fieldset {
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+legend { padding: 0 5px; }
+
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.check { flex-direction: row; gap: 10px; }
+
+.wyslij {
+    background: #4CAF50;
+}
+
+.wyslij:hover {
+    background: #45a049;
+    cursor: pointer;
+}
+
+/* ciemny motyw aktywowany kliknięciem */
+body.ciemny select,
+body.ciemny input {
+    background: #222;
+    color: #eee;
+    border: 1px solid #555;
+}
