@@ -14,7 +14,9 @@ body {
   background: white;
   font-family: Arial, sans-serif;
 }
-
+.image, .button,.color,.size {
+  transition: 0.5s ease;
+}
 .card {
   display: flex;
   gap: 30px;
@@ -26,6 +28,25 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   width: min(900px, 100%);
+}
+
+.card .image{
+    background-color: white;
+}
+.card:has(input[value="S"]:checked) .image {
+  transform: scale(0.8);
+}
+
+.card:has(input[value="M"]:checked) .image {
+  transform: scale(0.9);
+}
+
+.card:has(input[value="L"]:checked) .image {
+  transform: scale(1);
+}
+
+.card:has(input[value="XL"]:checked) .image {
+  transform: scale(1.1);
 }
 
 .image {
