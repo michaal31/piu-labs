@@ -1,0 +1,172 @@
+/* Reset stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+main, aside {
+  h1, h2, h3, p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.container {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f6a623;
+  color: #fff;
+  
+}
+
+header .logo {
+  font-size: 1.8rem;
+  border: 2px solid white;
+  background-color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  max-width: 120px;
+  max-height: 50px;
+  gap: 0.5rem;
+  margin: 0;
+  
+}
+header .logo::before {
+  content: "Logo ";
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+}
+
+header h1 {
+  font-size: 1.6rem;
+}
+
+nav {
+  display: flex;
+  background: #1c6ca1;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  display: block;
+  font-size: 1rem;
+}
+
+main, aside {
+  padding: 1rem 1.5rem;
+}
+
+main h1, main h2, main h3, main p,
+aside h1, aside h2, aside h3, aside p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+aside
+{
+    padding: 2rem;
+    background: #e6fff7;
+    border-bottom: 2px solid #d8eae2;
+}
+aside div
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+aside div span {
+display: inline-block;
+font-size: 4rem;
+margin-right: 0.4rem;
+margin-bottom: 0.4rem;
+background-color: #e6fff7;
+text-align: center;
+
+
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #3fa34d;
+  color: white;
+  font-weight: bold;
+  
+}
+
+@media (min-width: 1024px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main aside"
+      "footer footer";
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+    float: left;
+  }
+
+  main {
+    grid-area: main;
+    padding: 2rem;
+  }
+
+  aside {
+    grid-area: aside;
+    padding: 2rem;
+    background: #e6fff7;
+    border-left: 2px solid #d8eae2;
+  }
+  aside div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  aside div span {
+    background-color: #e6fff7;
+    justify-content: center;
+    display: inline-block;
+    font-size: 4rem
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

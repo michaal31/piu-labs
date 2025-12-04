@@ -1,0 +1,144 @@
+:root {
+  --blue: #1e73be;
+  --red: #d8372a;
+  --green: #1e9b43;
+  --yellow: #e3b71a;
+
+  --main-color: var(--blue);
+  --img-url: url("../img/polo_b.png");
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 12px;
+  width: min(900px, 100%);
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: min(900px, 100%);
+}
+
+.image {
+  width: min(500px, 90vw);
+  height: min(500px, 90vw);
+  background-image: var(--img-url);
+  background-size: cover;
+  background-position: center;
+  border: 4px solid var(--main-color);
+  border-radius: 10px;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vw - 40px);
+}
+
+.details {
+  width: min(300px, 90vw);
+  max-width: calc(100vw - 40px);
+}
+
+.header {
+  margin: 0;
+}
+.badge {
+  background: var(--main-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.section h3 {
+  margin-bottom: 5px;
+}
+
+.color_options {
+  display: flex;
+  gap: 10px;
+}
+
+.color_option input {
+  display: none;
+}
+
+.color {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  display: block;
+}
+
+.blue { background: var(--blue); }
+.red { background: var(--red); }
+.green { background: var(--green); }
+.yellow { background: var(--yellow); }
+
+.sizes {
+  display: flex;
+  gap: 10px;
+  
+}
+.size_option:has(input:checked) .size {
+  background: var(--main-color);
+  color: white;
+  border-color: black;
+}
+
+.size_option input {
+  display: none;
+}
+
+.size {
+  padding: 6px 14px;
+  border: 2px solid #444;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+}
+
+.button {
+  background: var(--main-color);
+  color: white;
+  border: 2 solid black;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cena {
+  color: black;
+}
+
+
+.card:has(input[value="blue"]:checked) {
+  --main-color: var(--blue);
+  --img-url: url("../img/polo_b.png");
+}
+
+.card:has(input[value="red"]:checked) {
+  --main-color: var(--red);
+  --img-url: url("../img/polo_r.png");
+}
+
+.card:has(input[value="green"]:checked) {
+  --main-color: var(--green);
+  --img-url: url("../img/polo_g.png");
+}
+
+.card:has(input[value="yellow"]:checked) {
+  --main-color: var(--yellow);
+  --img-url: url("../img/polo_y.png");
+}
