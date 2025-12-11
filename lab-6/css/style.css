@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+}
+#loader {
+  display: none;
+  font-weight: bold;
+}
+#error {
+  color: red;
+  margin-top: 10px;
+}
+ul {
+  margin-top: 15px;
+}

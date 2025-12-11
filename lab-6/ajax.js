@@ -1,4 +1,4 @@
-export class Ajax {
+class Ajax {
   constructor(options = {}) {
     this.defaultOptions = {
       baseURL: options.baseURL || "",
