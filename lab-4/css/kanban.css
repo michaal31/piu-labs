@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+#board {
+    display: flex;
+    gap: 20px;
+}
+.column {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.cards {
+    margin-top: 10px;
+}
+.card {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.card-controls {
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
